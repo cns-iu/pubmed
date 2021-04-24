@@ -10,9 +10,7 @@ for 2020: (removed to save space)
 * pubmed20n0001.xml to pubmed20n1430.xml (as of Oct 13,2020)
 * using medline_schema20.sql and medline_schema20_constraints.sql
 
-for 2021:
-* pubmed21n0001.xml to current
-* using medline_schema21.sql and medline_schema21_constraints.sql
+for 2021: not loaded, issues with ReferenceList values
 
 SchemaSpy Analysis:
 * [Database Documentation - 19](https://demo.cns.iu.edu/dbdocs/pubmed19/)
