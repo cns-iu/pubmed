@@ -14,4 +14,4 @@ for 2021: not loaded, issues with ReferenceList values
 
 SchemaSpy Analysis:
 * [Database Documentation - 19](https://demo.cns.iu.edu/dbdocs/pubmed19/)
-* [Database Documentation - 21](https://demo.cns.iu.edu/dbdocs/pubmed21/)
+
