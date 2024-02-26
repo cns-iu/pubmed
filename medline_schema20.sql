@@ -73,8 +73,14 @@ create table pubmedhistory (
 	year varchar
 );
 
+create table medline_investigators_list (
+    pmid varchar,
+	investigator_list_id varchar
+);
+
 create table medline_investigators (
 	pmid varchar,
+	investigator_list_id varchar,
 	investigator_ctr int,
 	initials varchar,
 	collective_name varchar,
@@ -110,6 +116,15 @@ create table pubmed_data_ref_list (
 	pmid varchar,
 	ref_list_ctr int,
 	title varchar
+);
+
+create table pubmed_data_ref_article
+(
+    pmid varchar,
+    ref_ctr integer,
+    art_ctr integer,
+    idtype varchar,
+    article_id varchar
 );
 
 create table pubmed_data_ref (
@@ -259,6 +274,63 @@ create table medline_author_identifier (
 	identifier varchar
 );
 
+create table medline_author_affiliation (
+	pmid varchar,
+	author_ctr int,
+	affiliation_ctr int,
+	affiliation varchar
+);
+
+create table medline_author_affiliation_identifier (
+	pmid varchar,
+	author_ctr int,
+	affiliation_ctr int,
+	affiliation_identifier_ctr int,
+	source varchar,
+	identifier varchar
+);
+
+create table medline_investigator_identifier (
+	pmid varchar,
+	investigator_list_id varchar,
+	investigator_ctr int,
+	identifier_id_ctr int,
+	source varchar,
+	investigator_id varchar
+);
+
+create table medline_investigator_affiliation (
+	pmid varchar,
+	investigator_ctr int,
+	affiliation_ctr int,
+	affiliation varchar
+);
+
+create table medline_investigator_affiliation_identifier (
+	pmid varchar,
+	investigator_id varchar,
+	investigator_ctr int,
+	affiliation_ctr int,
+	affiliation_identifier_ctr int,
+	source varchar
+);
+
+create table medline_accession_number (
+	pmid varchar,
+	databank_ctr int,
+	accession_ctr int,
+	accession_number varchar
+);
+
+create table medline_mesh_qualifier (
+	pmid varchar,
+	heading_ctr int,
+	qualifier_ctr int,
+	major_topic varchar,
+	ui varchar,
+	qualifier_name varchar
+);
+
 create table medline_keywords (
 	pmid varchar,
 	list_ctr int,
@@ -275,61 +347,3 @@ create table medline_other_abstract_text (
 	nlmcategory varchar,
 	label varchar
 );
-
-create table medline_author_affiliation (
-	pmid varchar,
-	author_ctr int,
-	affiliation_ctr int,
-	affiliation varchar
-);
-
-create table medline_mesh_qualifier (
-	pmid varchar,
-	heading_ctr int,
-	qualifier_ctr int,
-	major_topic varchar,
-	ui varchar,
-	qualifier_name varchar
-);
-
-create table medline_investigator_identifier (
-	pmid varchar,
-	investigator_ctr int,
-	identifier_id_ctr int,
-	source varchar,
-	identifier varchar
-);
-
-create table medline_investigator_affiliation (
-	pmid varchar,
-	investigator_ctr int,
-	affiliation_ctr int,
-	affiliation varchar
-);
-
-create table medline_accession_number (
-	pmid varchar,
-	databank_ctr int,
-	accession_ctr int,
-	accession_number varchar
-);
-
-create table medline_investigator_affiliation_identifier (
-	pmid varchar,
-	investigator_ctr int,
-	affiliation_ctr int,
-	affiliation_identifier_ctr int,
-	source varchar,
-	identifier varchar
-);
-
-create table medline_author_affiliation_identifier (
-	pmid varchar,
-	author_ctr int,
-	affiliation_ctr int,
-	affiliation_identifier_ctr int,
-	source varchar,
-	identifier varchar
-);
-
-
