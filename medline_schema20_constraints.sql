@@ -42,6 +42,11 @@ alter table only pubmed_data_ref
 alter table only pubmed_data_ref
 	add constraint fk_pubmed_data_ref foreign key (pmid) references medline_master(pmid) on delete cascade;
 
+alter table only pubmed_data_ref_article
+	add constraint uni_pubmed_data_ref_article unique (pmid,article_id);
+alter table only pubmed_data_ref_article
+	add constraint fk_pubmed_data_ref_article foreign key (pmid) references medline_master(pmid)on delete cascade;
+
 alter table only medline_other_abstract
 	add constraint uni_medline_other_abstract unique (pmid,abstract_ctr);
 alter table only medline_other_abstract
